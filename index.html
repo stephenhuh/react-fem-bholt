@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Frontend Masters React</title>
+    <script src="node_modules/react/dist/react.js"> //global variable react</script> 
+    <script src="node_modules/react-dom/dist/react-dom.js">//global variable reactdom</script>
+  </head>
+  <body>
+    <div id="app">React has not yet rendered</div>
+    <script type="text/javascript" charset="utf-8">
+      //Creating a blueprint for a new type of component React.createClass vs React.createElemeent (one instance)
+      var myFirstComponent = React.createClass({
+        render: function() {
+          return (
+            React.DOM.div(null,
+              React.DOM.h1(null, 'This is my first component')
+              )
+          )
+        }
+      })
+      ReactDOM.render(React.createElement(myFirstComponent), document.getElementById('app'))
+    </script>
+  </body>
+</html>
